@@ -1,3 +1,4 @@
+
 import PaginationControlled from "../components/Pagination";
 
 export default function Home() {
@@ -8,3 +9,4 @@ export default function Home() {
     </div>
   );
 }
+

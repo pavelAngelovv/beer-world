@@ -1,31 +1,34 @@
+import React, { useEffect, useState } from "react";
+
 import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import { useRouter } from "next/router";
-
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import BeerCard from "./CardCollection";
+import { Alert, Box } from "@mui/material";
 import { Grid } from "@mui/material";
+import { useRouter } from "next/router";
+import axios from "axios";
 
-export default function PaginationControlled() {
+import BeerCard from "./BeerCard";
+
+export default function RenderBeers() {
   const router = useRouter();
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = useState(1);
+  const [beers, setBeers] = useState([]);
   const handleChange = (event, value) => {
     setPage(value);
     router.push(`beers/?page=${value}`, undefined, { shallow: true });
   };
 
-  const [Beer, setBeers] = useState([]);
   const getBeerData = () => {
-    console.log(page);
-
     axios
       .get(`https://api.punkapi.com/v2/beers?page=${page}&per_page=10`)
       .then((response) => {
         const beers = response.data;
 
         setBeers(beers);
+      })
+      .catch((error) => {
+        return console.error(error.message);
       });
   };
 
@@ -34,7 +37,7 @@ export default function PaginationControlled() {
   }, [page]);
 
   return (
-    <div key="beer-cards">
+    <Box>
       <Grid
         container
         direction="row"
@@ -43,7 +46,9 @@ export default function PaginationControlled() {
         wrap="wrap"
         spacing={3}
       >
-        <BeerCard beers={Beer} />
+        {beers.map((beer) => (
+          <BeerCard key={beer.id} beer={beer} />
+        ))}
       </Grid>
 
       <Stack className="pagination" spacing={2}>
@@ -56,6 +61,6 @@ export default function PaginationControlled() {
           sx={{ button: { color: "white" } }}
         />
       </Stack>
-    </div>
+    </Box>
   );
 }

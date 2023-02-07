@@ -1,17 +1,19 @@
 import React from "react";
-import { CardMedia, Divider } from "@mui/material";
+import { Box } from "@mui/material";
+import { CardMedia } from "@mui/material";
+import { Divider } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-export default function GridCard({ beer }) {
+export default function BeerCard({ beer }) {
   const handleCardClick = (event) => {
     console.log("ad");
   };
 
   return (
-    <div className="card">
+    <Box sx={{m:'0.5cm', ml:'0.45cm', textAlign:'center'}}>
       <Card
         sx={{
           ml: 5,
@@ -19,7 +21,6 @@ export default function GridCard({ beer }) {
           backgroundColor: "white",
           width: 480,
         }}
-        className="ad"
       >
         <CardActionArea onClick={handleCardClick}>
           <CardContent>
@@ -49,7 +50,6 @@ export default function GridCard({ beer }) {
             <Typography
               variant="body2"
               color="textSecondary"
-              component="p"
               sx={{
                 fontFamily: '"Courier New", Courier, monospace',
                 fontWeight: "bold",
@@ -75,6 +75,6 @@ export default function GridCard({ beer }) {
           </CardContent>
         </CardActionArea>
       </Card>
-    </div>
+    </Box >
   );
 }

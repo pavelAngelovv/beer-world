@@ -9,24 +9,30 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(from 180deg at 50% 50%,
-      #16abff33 0deg,
-      #0885ff33 55deg,
-      #54d6ff33 120deg,
-      #0071ff33 160deg,
-      transparent 360deg);
-  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0));
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg
+  );
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(#00000080,
-      #00000040,
-      #00000030,
-      #00000020,
-      #00000010,
-      #00000010,
-      #00000080);
+  --tile-border: conic-gradient(
+    #00000080,
+    #00000040,
+    #00000030,
+    #00000020,
+    #00000010,
+    #00000010,
+    #00000080
+  );
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
@@ -40,22 +46,28 @@
     --background-start-rgb: 54, 50, 50;
     --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(255, 255, 255, 0.4),
-        rgba(0, 64, 255, 0));
-    --secondary-glow: linear-gradient(to bottom right,
-        rgba(1, 65, 255, 0),
-        rgba(1, 65, 255, 0),
-        rgba(200, 204, 216, 0.3));
+    --primary-glow: radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(0, 64, 255, 0)
+    );
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(200, 204, 216, 0.3)
+    );
 
     --tile-start-rgb: 2, 13, 46;
     --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(#ffffff80,
-        #ffffff40,
-        #ffffff30,
-        #ffffff20,
-        #ffffff10,
-        #ffffff10,
-        #ffffff80);
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
@@ -81,9 +93,12 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
 a {
@@ -107,26 +122,11 @@ footer {
   margin-left: 3.2cm;
 }
 
-.card {
-  margin: 0.5cm;
-  margin-left: 0.45cm;
-  text-align: center;
-  
-}
-
-.cardText {
-  padding-top: 4cm;
-}
-
-.cardBeerName {
-  padding-bottom: 1cm;
-}
-
 .cardImg {
   padding-top: 1cm;
   width: 10cm;
   height: 16cm;
-  object-fit:contain;
+  object-fit: contain;
   padding-bottom: 1cm;
   margin-left: 0.8cm;
 }
@@ -160,10 +160,6 @@ footer {
   font-family: "monospace";
 }
 
-.accountWrapper {
-  padding-top: 3cm;
-}
-
 .paper {
   text-align: center;
   padding: 0.5cm;
@@ -172,7 +168,6 @@ footer {
 }
 
 .profilePicture {
-  height: 5.2cm;
   border-radius: 10cm;
 }
 
@@ -181,6 +176,10 @@ footer {
     margin-left: 3.35cm;
     margin-right: 0.1cm;
   }
+
+  .accountContent {
+    margin-left: 3cm;
+  }
 }
 
 @media (max-width: 900px) {
@@ -188,5 +187,9 @@ footer {
     align-content: center;
     margin-left: 0.13cm;
     margin-right: 0.13cm;
+  }
+
+  .accountContent {
+    margin-left: 0cm;
   }
 }

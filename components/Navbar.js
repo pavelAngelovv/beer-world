@@ -1,8 +1,10 @@
 import * as React from "react";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import PersistentDrawerLeft from "./DrawerMenu";
-import PermanentDrawerLeft from "./PermanentDrawer";
+
+import PersistentDrawerLeft from "./MobileMenu";
+import PermanentDrawerLeft from "./DesktopMenu";
 
 function Navbar() {
   return (

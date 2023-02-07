@@ -1,29 +1,26 @@
-import { CardMedia, Divider } from "@mui/material";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-
-const useStyles = makeStyles({
-  root: {
-    marginLeft: 15,
-    width: 485,
-  },
-});
+import { CardMedia, Divider } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 export default function GridCard({ beer }) {
-  const classes = useStyles();
   const handleCardClick = (event) => {
-    console.log("Card clicked");
+    console.log("ad");
   };
 
   return (
     <div className="card">
       <Card
-        style={{ borderRadius: "186px", backgroundColor: "white" }}
-        className={classes.root}>
+        sx={{
+          ml: 5,
+          borderRadius: "186px",
+          backgroundColor: "white",
+          width: 480,
+        }}
+        className="ad"
+      >
         <CardActionArea onClick={handleCardClick}>
           <CardContent>
             <CardMedia
@@ -40,11 +37,10 @@ export default function GridCard({ beer }) {
               gutterBottom
               variant="h5"
               component="h2"
-              style={{
+              sx={{
                 fontFamily: '"Brush Script MT", cursive',
                 fontWeight: "bold",
                 fontSize: 35,
-                paddingBottom: 30,
               }}
             >
               {beer.name}
@@ -54,12 +50,10 @@ export default function GridCard({ beer }) {
               variant="body2"
               color="textSecondary"
               component="p"
-              style={{
-                paddingBottom: 20,
+              sx={{
                 fontFamily: '"Courier New", Courier, monospace',
                 fontWeight: "bold",
                 fontSize: 20,
-                paddingTop: 17,
               }}
             >
               {beer.tagline}
@@ -69,9 +63,9 @@ export default function GridCard({ beer }) {
               variant="body2"
               color="textSecondary"
               component="p"
-              style={{
-                paddingBottom: 5,
-                paddingTop: 20,
+              sx={{
+                paddingBottom: 1,
+                paddingTop: 2,
                 fontSize: 50,
                 fontFamily: '"Brush Script MT", cursive',
               }}

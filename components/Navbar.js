@@ -12,8 +12,12 @@ function Navbar() {
       </Box>
 
       <Box
-        sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
-        style={{ paddingRight: "30px", justifyContent: "right" }}
+        sx={{
+          flexGrow: 1,
+          display: { xs: "none", md: "flex" },
+          paddingRight: "30px",
+          justifyContent: "right",
+        }}
       >
         <PermanentDrawerLeft />
       </Box>

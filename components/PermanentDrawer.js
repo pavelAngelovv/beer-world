@@ -11,11 +11,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { Avatar, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import SportsBarIcon from "@mui/icons-material/SportsBar";
-import PortraitIcon from '@mui/icons-material/Portrait';
+import PortraitIcon from "@mui/icons-material/Portrait";
 
 const drawerWidth = 240;
 
@@ -25,16 +24,21 @@ export default function PermanentDrawerLeft() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{ color:'white',backgroundColor:'white', width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+        sx={{
+          color: "white",
+          backgroundColor: "white",
+          width: `calc(100% - ${drawerWidth}px)`,
+          ml: `${drawerWidth}px`,
+        }}
       >
         <Toolbar>
-          <SportsBarIcon sx={{color:'black'}}/>
+          <SportsBarIcon sx={{ color: "black" }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
             href="/"
-            sx={{color:'black'}}
+            sx={{ color: "black" }}
           >
             Beer World
           </Typography>

@@ -1,7 +1,5 @@
 {
-
   "name": "beers",
-
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,14 +11,11 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-
-    "@material-ui/core": "^4.12.4",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.6",
     "@mui/styles": "^5.11.7",
     "@next/font": "13.1.6",
     "axios": "^1.2.6",
-
     "classnames": "^2.3.2",
     "next": "^13.1.6",
     "react": "^18.2.0",
@@ -28,7 +23,6 @@
     "react-router-dom": "^6.8.0"
   },
   "main": "index.js",
-
   "license": "MIT",
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "repository": {
@@ -36,5 +30,4 @@
     "url": "beer-world"
   },
   "author": "Pavel Angelov"
-
 }

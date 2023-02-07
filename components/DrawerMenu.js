@@ -16,7 +16,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import PortraitIcon from '@mui/icons-material/Portrait';
+import PortraitIcon from "@mui/icons-material/Portrait";
 import SportsBarIcon from "@mui/icons-material/SportsBar";
 
 const drawerWidth = 200;
@@ -72,13 +72,10 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <SportsBarIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1, ml:19 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-          >
+          <SportsBarIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1, ml: 19 }}
+          />
+          <Typography variant="h5" noWrap component="a" href="/">
             Beer World
           </Typography>
         </Toolbar>

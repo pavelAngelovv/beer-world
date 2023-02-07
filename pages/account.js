@@ -1,8 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@mui/material";
 import { Divider } from "@mui/material";
 
 export default function Profile() {
@@ -118,5 +117,4 @@ export default function Profile() {
       </Grid>
     </div>
   );
-
 }

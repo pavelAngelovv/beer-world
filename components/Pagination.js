@@ -8,7 +8,6 @@ import React, { useEffect, useState } from "react";
 import BeerCard from "./CardCollection";
 import { Grid } from "@mui/material";
 
-
 export default function PaginationControlled() {
   const router = useRouter();
   const [page, setPage] = React.useState(1);

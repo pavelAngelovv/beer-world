@@ -171,25 +171,3 @@ footer {
   border-radius: 10cm;
 }
 
-/* @media (max-width: 2700px) {
-  .content {
-    margin-left: 3.35cm;
-    margin-right: 0.1cm;
-  }
-
-  .accountContent {
-    margin-left: 3cm;
-  }
-}
-
-@media (max-width: 900px) {
-  .content {
-    align-content: center;
-    margin-left: 0.13cm;
-    margin-right: 0.13cm;
-  }
-
-  .accountContent {
-    margin-left: 0cm;
-  }
-} */

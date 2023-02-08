@@ -119,7 +119,7 @@ footer {
   padding-bottom: 0.7cm;
   color: #777;
   margin-top: 1cm;
-  margin-left: 3.2cm;
+  
 }
 
 .cardImg {
@@ -171,7 +171,7 @@ footer {
   border-radius: 10cm;
 }
 
-@media (max-width: 2700px) {
+/* @media (max-width: 2700px) {
   .content {
     margin-left: 3.35cm;
     margin-right: 0.1cm;
@@ -192,4 +192,4 @@ footer {
   .accountContent {
     margin-left: 0cm;
   }
-}
+} */

@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
+import { Paper } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Divider } from "@mui/material";
 import Image from "next/image";
 
 export default function Profile() {
+  const [user, setUser] = useState({});
+
   useEffect(() => {
     getProfileData();
   }, []);
-
-  const [user, setUser] = useState("");
 
   const getProfileData = async () => {
     await axios
@@ -24,11 +27,13 @@ export default function Profile() {
         return console.error(error);
       });
   };
+
   if (!user.name) {
     return null;
   }
+  console.log(typeof user);
   return (
-    <div className="accountContent">
+    <Box sx={{ marginLeft: { md: "6.7cm", sm: "0" } }}>
       <Box sx={{ paddingTop: "3cm", textAlign: "center" }}>
         <Typography
           sx={{
@@ -66,7 +71,7 @@ export default function Profile() {
             alignItems="center"
             sx={{ wordWrap: "break-word" }}
           >
-            <Paper className="paper">
+            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Email</Typography>
                 <Divider />
@@ -76,7 +81,7 @@ export default function Profile() {
               </Grid>
             </Paper>
 
-            <Paper className="paper">
+            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Phone Number</Typography>
                 <Divider />
@@ -95,7 +100,7 @@ export default function Profile() {
             direction="column"
             alignItems="center"
           >
-            <Paper className="paper">
+            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Gender</Typography>
                 <Divider />
@@ -105,7 +110,7 @@ export default function Profile() {
               </Grid>
             </Paper>
 
-            <Paper className="paper">
+            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Country</Typography>
                 <Divider />
@@ -117,6 +122,6 @@ export default function Profile() {
           </Grid>
         </Grid>
       </Box>
-    </div>
+    </Box>
   );
 }

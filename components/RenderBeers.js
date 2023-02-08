@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import { Alert, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -14,6 +14,11 @@ export default function RenderBeers() {
   const router = useRouter();
   const [page, setPage] = useState(1);
   const [beers, setBeers] = useState([]);
+
+  useEffect(() => {
+    getBeerData();
+  }, [page]);
+
   const handleChange = (event, value) => {
     setPage(value);
     router.push(`beers/?page=${value}`, undefined, { shallow: true });
@@ -23,18 +28,14 @@ export default function RenderBeers() {
     axios
       .get(`https://api.punkapi.com/v2/beers?page=${page}&per_page=10`)
       .then((response) => {
-        const beers = response.data;
+        const beerData = response.data;
 
-        setBeers(beers);
+        setBeers(beerData);
       })
       .catch((error) => {
         return console.error(error.message);
       });
   };
-
-  useEffect(() => {
-    getBeerData();
-  }, [page]);
 
   return (
     <Box>

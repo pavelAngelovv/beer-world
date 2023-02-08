@@ -1,9 +1,10 @@
 import RenderBeers from "@/components/RenderBeers";
+import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 
 export default function Home() {
   return (
-    <div className="content">
+    <Box sx={{ marginLeft: { md: "6.7cm", sm: "0" } }}>
       <Typography
         sx={{
           textAlign: "center",
@@ -16,6 +17,6 @@ export default function Home() {
         Beers
       </Typography>
       <RenderBeers />
-    </div>
+    </Box>
   );
 }

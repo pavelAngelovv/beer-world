@@ -13,7 +13,7 @@ export default function BeerCard({ beer }) {
   };
 
   return (
-    <Box sx={{m:'0.5cm', ml:'0.45cm', textAlign:'center'}}>
+    <Box sx={{ m: "0.5cm", ml: "0.45cm", textAlign: "center" }}>
       <Card
         sx={{
           ml: 5,
@@ -75,6 +75,6 @@ export default function BeerCard({ beer }) {
           </CardContent>
         </CardActionArea>
       </Card>
-    </Box >
+    </Box>
   );
 }

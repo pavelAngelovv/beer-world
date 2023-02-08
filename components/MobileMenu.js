@@ -61,22 +61,32 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar sx={{backgroundColor:'white'}} position="fixed" open={open}>
+      <AppBar sx={{ backgroundColor: "white" }} position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: "none" }), color:"black" }}
+            sx={{ mr: 2, ...(open && { display: "none" }), color: "black" }}
           >
             <MenuIcon />
           </IconButton>
-          
+
           <SportsBarIcon
-            sx={{ display: { xs: "flex", md: "none" }, textAlign:'center', color:"black" }}
+            sx={{
+              display: { xs: "flex", md: "none" },
+              textAlign: "center",
+              color: "black",
+            }}
           />
-          <Typography sx={{color:"black"}} variant="h5" noWrap component="a" href="/">
+          <Typography
+            sx={{ color: "black" }}
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+          >
             Beer World
           </Typography>
         </Toolbar>

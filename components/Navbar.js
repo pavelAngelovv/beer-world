@@ -1,6 +1,4 @@
 import * as React from "react";
-
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 
 import PersistentDrawerLeft from "./MobileMenu";
@@ -8,7 +6,7 @@ import PermanentDrawerLeft from "./DesktopMenu";
 
 function Navbar() {
   return (
-    <AppBar position="static">
+    <Box>
       <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
         <PersistentDrawerLeft />
       </Box>
@@ -23,7 +21,7 @@ function Navbar() {
       >
         <PermanentDrawerLeft />
       </Box>
-    </AppBar>
+    </Box>
   );
 }
 export default Navbar;

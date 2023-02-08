@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { Box } from "@mui/material";
-import { Grid } from "@mui/material";
-import { Paper } from "@mui/material";
-import { Typography } from "@mui/material";
-import { Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 import Image from "next/image";
 
 export default function Profile() {
@@ -24,23 +25,25 @@ export default function Profile() {
         setUser(userData);
       })
       .catch((error) => {
-        return console.error(error);
+        console.error(error);
       });
   };
 
   if (!user.name) {
     return null;
   }
-  console.log(typeof user);
+
   return (
-    <Box sx={{ marginLeft: { md: "6.7cm", sm: "0" } }}>
-      <Box sx={{ paddingTop: "3cm", textAlign: "center" }}>
+    <Box
+      sx={{ marginLeft: { md: 45, sm: "0" }, marginRight: { md: 15, sm: 0 } }}
+    >
+      <Box sx={{ paddingTop: 10, textAlign: "center" }}>
         <Typography
           sx={{
             textAlign: "center",
             fontSize: "70px",
             fontFamily: ' "Brush Script MT", cursive;',
-            paddingBottom: "2cm",
+            paddingBottom: 10,
           }}
         >
           My Account
@@ -71,7 +74,7 @@ export default function Profile() {
             alignItems="center"
             sx={{ wordWrap: "break-word" }}
           >
-            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
+            <Paper sx={{ textAlign: "center", width: "100%", mb: 2.4 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Email</Typography>
                 <Divider />
@@ -81,7 +84,7 @@ export default function Profile() {
               </Grid>
             </Paper>
 
-            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
+            <Paper sx={{ textAlign: "center", width: "100%", mb: 2 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Phone Number</Typography>
                 <Divider />
@@ -100,7 +103,7 @@ export default function Profile() {
             direction="column"
             alignItems="center"
           >
-            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
+            <Paper sx={{ textAlign: "center", width: "100%", mb: 2.3 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Gender</Typography>
                 <Divider />
@@ -110,7 +113,7 @@ export default function Profile() {
               </Grid>
             </Paper>
 
-            <Paper sx={{ textAlign: "center", width: "100%", mb: "0.5cm" }}>
+            <Paper sx={{ textAlign: "center", width: "100%", mb: 30 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Country</Typography>
                 <Divider />

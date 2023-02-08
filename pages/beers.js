@@ -1,17 +1,17 @@
-import RenderBeers from "@/components/RenderBeers";
-import { Box } from "@mui/material";
-import { Typography } from "@mui/material";
+import RenderBeers from "components/RenderBeers";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 export default function Home() {
   return (
-    <Box sx={{ marginLeft: { md: "6.7cm", sm: "0" } }}>
+    <Box sx={{ marginLeft: { md: 31.5, sm: 0 } }}>
       <Typography
         sx={{
           textAlign: "center",
           fontSize: "90px",
           fontFamily: ' "Brush Script MT", cursive;',
-          paddingBottom: "2cm",
-          paddingTop: "2cm",
+          paddingBottom: 10,
+          paddingTop: 10,
         }}
       >
         Beers

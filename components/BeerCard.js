@@ -1,7 +1,7 @@
 import React from "react";
-import { Box } from "@mui/material";
-import { CardMedia } from "@mui/material";
-import { Divider } from "@mui/material";
+import Box from "@mui/material/Box"
+import CardMedia from "@mui/material/CardMedia";
+import Divider from "@mui/material/Divider";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
@@ -13,7 +13,7 @@ export default function BeerCard({ beer }) {
   };
 
   return (
-    <Box sx={{ m: "0.5cm", ml: "0.45cm", textAlign: "center" }}>
+    <Box sx={{ m: 2, ml: 2.3, textAlign: "center" }}>
       <Card
         sx={{
           ml: 5,

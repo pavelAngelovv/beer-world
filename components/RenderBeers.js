@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import  { useEffect } from "react";
+import  { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import { Box } from "@mui/material";
-import { Grid } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import { useRouter } from "next/router";
 import axios from "axios";
 
@@ -33,7 +34,7 @@ export default function RenderBeers() {
         setBeers(beerData);
       })
       .catch((error) => {
-        return console.error(error.message);
+        console.error(error.message);
       });
   };
 

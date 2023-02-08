@@ -1,6 +1,5 @@
 import React from "react";
-import  { useEffect } from "react";
-import  { useState } from "react";
+import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";

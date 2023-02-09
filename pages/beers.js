@@ -1,20 +1,22 @@
-import Head from 'next/head';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import RenderBeers from "components/RenderBeers";
 
-
-export const getStaticProps = async () => {
-    const res = await fetch('https://api.punkapi.com/v2/beers')
-    const data = await res.json()
-
-    return {
-      props: {beers: data}
-    }
-}
-
-export default function Home({ beers }) {
+export default function Home() {
   return (
-    <div>
-      <h1>All beers</h1>
-    </div>
-      
-  )
+    <Box sx={{ marginLeft: { md: 31.5, sm: 0 } }}>
+      <Typography
+        sx={{
+          textAlign: "center",
+          fontSize: "90px",
+          fontFamily: ' "Brush Script MT", cursive;',
+          paddingBottom: 10,
+          paddingTop: 10,
+        }}
+      >
+        Beers
+      </Typography>
+      <RenderBeers />
+    </Box>
+  );
 }

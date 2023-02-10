@@ -16,6 +16,10 @@ import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import SportsBarIcon from "@mui/icons-material/SportsBar";
 import PortraitIcon from "@mui/icons-material/Portrait";
+import { TextField } from "@mui/material";
+import Search from "./SearchBar";
+
+
 
 const drawerWidth = 240;
 
@@ -43,12 +47,7 @@ export default function PermanentDrawerLeft() {
           >
             Beer World
           </Typography>
-
-          <Button>
-            <Avatar>
-              <SearchIcon />
-            </Avatar>
-          </Button>
+        
         </Toolbar>
       </AppBar>
       <Drawer

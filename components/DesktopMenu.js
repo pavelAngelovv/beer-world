@@ -9,10 +9,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import PortraitIcon from "@mui/icons-material/Portrait";
-import SportsBarIcon from "@mui/icons-material/SportsBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import PortraitIcon from "@mui/icons-material/Portrait";
+import SportsBarIcon from "@mui/icons-material/SportsBar";
 
 const drawerWidth = 240;
 

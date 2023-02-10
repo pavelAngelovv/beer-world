@@ -7,10 +7,10 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
-import SearchIcon from "@mui/icons-material/Search";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import SearchIcon from "@mui/icons-material/Search";
 
 import BeerCard from "./BeerCard";
 

@@ -6,9 +6,9 @@ import axios from "axios";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
-import Image from "next/image";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import Image from "next/image";
 
 export default function Profile() {
   const [user, setUser] = useState({});

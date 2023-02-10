@@ -5,12 +5,12 @@ import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import axios from "axios";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
+import axios from "axios";
 
 import BeerCard from "./BeerCard";
 
@@ -24,7 +24,6 @@ export default function RenderBeers() {
   useEffect(() => {
     getBeerData();
   }, [page]);
-  ///
 
   const handleSearchChange = (event) => {
     setQuery(event.target.value);

@@ -71,7 +71,7 @@ export default function RenderBeers() {
           onSubmit={handleSubmit}
         >
           <TextField
-            id="filled-basic"
+            id="input-search"
             size="large"
             label="Search Beers"
             variant="filled"

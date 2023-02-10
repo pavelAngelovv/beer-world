@@ -43,7 +43,6 @@ export default function RenderBeers() {
     router.push(`beers/?beer_name=${query}`, undefined, { shallow: true });
     setIsSearch(true);
     setBeers(queryBeerData);
-    console.log(res.data);
   };
 
   const handleChange = (event, value) => {

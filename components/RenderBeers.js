@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import axios from "axios";
 import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
-import TextField from "@mui/material/TextField";
+import Grid from "@mui/material/Grid";
+import Pagination from "@mui/material/Pagination";
 import SearchIcon from "@mui/icons-material/Search";
-import axios from "axios";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 import BeerCard from "./BeerCard";
 

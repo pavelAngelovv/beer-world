@@ -10,7 +10,6 @@ export default function Home() {
           textAlign: "center",
           fontSize: "90px",
           fontFamily: ' "Brush Script MT", cursive;',
-          paddingBottom: 10,
           paddingTop: 10,
         }}
       >

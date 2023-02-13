@@ -21,8 +21,7 @@ import ListViewBeers from "./ListViewBeers";
 export default function RenderBeers() {
   const router = useRouter();
   const [page, setPage] = useState(1);
-  const [gridPage, setGridPage] = useState(true);
-  const [listPage, setListPage] = useState(false);
+  const [view, setView] = useState("gridView");
   const [beers, setBeers] = useState([]);
   const [query, setQuery] = useState("");
   const [isSearch, setIsSearch] = useState(false);
@@ -100,8 +99,7 @@ export default function RenderBeers() {
         >
           <ToggleButton
             onClick={() => {
-              setListPage(false);
-              setGridPage(true);
+              setView("gridView");
             }}
             value="module"
             aria-label="module"
@@ -110,8 +108,7 @@ export default function RenderBeers() {
           </ToggleButton>
           <ToggleButton
             onClick={() => {
-              setGridPage(false);
-              setListPage(true);
+              setView("listView");
             }}
             value="list"
             aria-label="list"
@@ -119,8 +116,8 @@ export default function RenderBeers() {
             <ViewListIcon />
           </ToggleButton>
         </ToggleButtonGroup>
-        {gridPage ? <GridViewBeers beers={beers} /> : null}
-        {listPage ? <ListViewBeers beers={beers} /> : null}
+        {view == "gridView" ? <GridViewBeers beers={beers} /> : null}
+        {view == "listView" ? <ListViewBeers beers={beers} /> : null}
       </Box>
 
       {!isSearch && (

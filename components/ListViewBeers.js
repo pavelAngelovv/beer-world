@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
@@ -9,26 +8,7 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-const useStyles = makeStyles({
-  listHeader: {
-    width: 100,
-    fontFamily: '"Brush Script MT", cursive',
-    fontSize: 45,
-    paddingLeft: 50,
-    paddingRight: 40,
-  },
-  listItem: {
-    width: 240,
-    marginLeft: 0,
-    fontFamily: '"Courier New", Courier, monospace',
-    fontWeight: "bold",
-    fontSize: 21,
-  },
-});
-
 export default function ListViewBeers({ beers }) {
-  const classes = useStyles();
-
   const handleCardClick = (event) => {
     console.log("table card clicked!");
   };
@@ -79,10 +59,28 @@ export default function ListViewBeers({ beers }) {
                 >
                   abv
                 </TableCell>
-                <TableCell className={classes.listHeader} align="center">
+                <TableCell
+                  sx={{
+                    width: 80,
+                    fontFamily: '"Brush Script MT", cursive',
+                    fontSize: 45,
+                    paddingLeft: 5,
+                    paddingRight: 12,
+                  }}
+                  align="center"
+                >
                   first_brewed
                 </TableCell>
-                <TableCell className={classes.listHeader} align="center">
+                <TableCell
+                  sx={{
+                    width: 100,
+                    fontFamily: '"Brush Script MT", cursive',
+                    fontSize: 45,
+                    paddingLeft: 0,
+                    paddingRight: 2,
+                  }}
+                  align="center"
+                >
                   contributed_by
                 </TableCell>
               </Box>
@@ -122,10 +120,28 @@ export default function ListViewBeers({ beers }) {
                     >
                       {beer.name}
                     </TableCell>
-                    <TableCell className={classes.listItem} align="center">
+                    <TableCell
+                      sx={{
+                        width: 240,
+                        marginLeft: 0,
+                        fontFamily: '"Courier New", Courier, monospace',
+                        fontWeight: "bold",
+                        fontSize: 21,
+                      }}
+                      align="center"
+                    >
                       {beer.abv}%
                     </TableCell>
-                    <TableCell className={classes.listItem} align="center">
+                    <TableCell
+                      sx={{
+                        width: 240,
+                        marginLeft: 0,
+                        fontFamily: '"Courier New", Courier, monospace',
+                        fontWeight: "bold",
+                        fontSize: 21,
+                      }}
+                      align="center"
+                    >
                       {beer.first_brewed}
                     </TableCell>
                     <TableCell

@@ -15,10 +15,7 @@ export default function ListViewBeers({ beers }) {
 
   return (
     <Box sx={{ ml: { lg: 30, sm: 0 } }}>
-      <Table
-        sx={{ maxWidth: 500, aligntext: "center" }}
-        aria-label="simple table"
-      >
+      <Table sx={{ maxWidth: 500 }} aria-label="simple table">
         <Box sx={{ ml: 2, mb: 4 }}>
           <TableHead>
             <TableRow sx={{ color: "white", backgroundColor: "white" }}>

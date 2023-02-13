@@ -48,7 +48,6 @@ export default function ListViewBeers({ beers }) {
                     fontFamily: '"Brush Script MT", cursive',
                     fontSize: 45,
                     paddingLeft: 14,
-                    paddingRight: 30,
                     pr: 10,
                   }}
                   align="center"

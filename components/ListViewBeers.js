@@ -14,7 +14,7 @@ export default function ListViewBeers({ beers }) {
   };
 
   return (
-    <Box sx={{ ml: { lg: 30, sm: 0 } }}>
+    <Box sx={{ ml: { sm: 0, lg: 30 } }}>
       <Table sx={{ maxWidth: 500 }} aria-label="simple table">
         <Box sx={{ ml: 2, mb: 4 }}>
           <TableHead>
@@ -36,7 +36,6 @@ export default function ListViewBeers({ beers }) {
                     fontFamily: '"Brush Script MT", cursive',
                     fontSize: 45,
                     paddingLeft: 7,
-                    paddingRight: 30,
                     pr: 10,
                   }}
                   align="center"

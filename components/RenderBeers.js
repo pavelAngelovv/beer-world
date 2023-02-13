@@ -5,18 +5,24 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
-import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
+import ViewListIcon from "@mui/icons-material/ViewList";
+import ViewModuleIcon from "@mui/icons-material/ViewModule";
 
-import BeerCard from "./BeerCard";
+import GridViewBeers from "./gridViewBeers";
+import ListViewBeers from "./ListViewBeers";
 
 export default function RenderBeers() {
   const router = useRouter();
   const [page, setPage] = useState(1);
+  const [gridPage, setGridPage] = useState(true);
+  const [listPage, setListPage] = useState(false);
   const [beers, setBeers] = useState([]);
   const [query, setQuery] = useState("");
   const [isSearch, setIsSearch] = useState(false);
@@ -67,7 +73,7 @@ export default function RenderBeers() {
     <Box>
       <Box sx={{ ml: 2 }}>
         <FormControl
-          sx={{ display: "inline-block", pb: 10 }}
+          sx={{ display: "inline-block", pb: 10, ml: 3 }}
           onSubmit={handleSubmit}
         >
           <TextField
@@ -87,20 +93,36 @@ export default function RenderBeers() {
             </Avatar>
           </Button>
         </FormControl>
+        <ToggleButtonGroup
+          orientation="horizontal"
+          exclusive
+          sx={{ backgroundColor: "white", float: "right", mr: 7 }}
+        >
+          <ToggleButton
+            onClick={() => {
+              setListPage(false);
+              setGridPage(true);
+            }}
+            value="module"
+            aria-label="module"
+          >
+            <ViewModuleIcon />
+          </ToggleButton>
+          <ToggleButton
+            onClick={() => {
+              setGridPage(false);
+              setListPage(true);
+            }}
+            value="list"
+            aria-label="list"
+          >
+            <ViewListIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
+        {gridPage ? <GridViewBeers beers={beers} /> : null}
+        {listPage ? <ListViewBeers beers={beers} /> : null}
       </Box>
 
-      <Grid
-        container
-        direction="row"
-        alignContent="center"
-        alignItems="center"
-        wrap="wrap"
-        spacing={3}
-      >
-        {beers.map((beer) => (
-          <BeerCard key={beer.id} beer={beer} />
-        ))}
-      </Grid>
       {!isSearch && (
         <Stack className="pagination" spacing={2}>
           <Typography>Page: {page}</Typography>

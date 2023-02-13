@@ -167,6 +167,12 @@ footer {
   margin-bottom: 0.5cm;
 }
 
+.listHeaders{
+  font-family: '"Brush Script MT", cursive';
+  font-weight: "bold";
+  font-size: 35
+}
+
 .profilePicture {
   border-radius: 10cm;
 }

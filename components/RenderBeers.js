@@ -15,7 +15,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 
-import GridViewBeers from "./GridViewBeers/index";
+import GridViewBeers from "./GridViewBeers";
 import ListViewBeers from "./ListViewBeers";
 
 export default function RenderBeers() {

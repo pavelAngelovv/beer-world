@@ -33,9 +33,7 @@ export default function Profile() {
   }
 
   return (
-    <Box
-      sx={styles.boxContainer}
-    >
+    <Box sx={styles.boxContainer}>
       <Box sx={{ paddingTop: 10, textAlign: "center" }}>
         <Typography
           sx={{
@@ -53,7 +51,6 @@ export default function Profile() {
             width={200}
             height={200}
             alt="profile-picture"
-            className="profilePicture"
             src={user.picture.large}
           />
         </Box>

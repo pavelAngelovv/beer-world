@@ -121,7 +121,13 @@ export default function RenderBeers() {
       </Box>
 
       {!isSearch && (
-        <Stack className="pagination" spacing={2}>
+        <Stack sx={{
+          color: '#ffffff',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          marginTop: '1rem',
+          textAlign: 'center',
+        }} spacing={2}>
           <Typography>Page: {page}</Typography>
           <Pagination
             color="primary"

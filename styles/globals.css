@@ -42,44 +42,10 @@ footer {
   margin-top: 1cm;
 }
 
-.cardImg {
-  padding-top: 1cm;
-  width: 10cm;
-  height: 16cm;
-  object-fit: contain;
-  padding-bottom: 1cm;
-  margin-left: 0.8cm;
-}
 
-.beerTitle {
-  text-align: center;
-  font-size: 60px;
-  font-family: "Brush Script MT", cursive;
-  padding-bottom: 2cm;
-  padding-top: 2cm;
-}
 
-.accountTitle {
-  text-align: center;
-  font-size: 60px;
-  font-family: "Brush Script MT", cursive;
-  padding-bottom: 2cm;
-  padding-top: 0cm;
-  margin-left: 3cm;
-}
 
-.pagination {
-  color: #ffffff;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 1rem;
-  text-align: center;
-}
 
-.siteTitle {
-  font-family: "monospace";
-}
 
-.profilePicture {
-  border-radius: 10cm;
-}
+
+

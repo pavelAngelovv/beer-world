@@ -21,6 +21,14 @@ const styles = {
     fontWeight: "bold",
     fontSize: 20,
   },
+  cardImg: {
+    paddingTop: "1cm",
+  width: "10cm",
+  height: "16cm",
+  objectFit: "contain",
+  paddingBottom: "1cm",
+  marginLeft: "0.8cm"
+  },
 };
 
 export default styles;

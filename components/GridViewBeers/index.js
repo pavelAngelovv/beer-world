@@ -31,7 +31,7 @@ export default function GridViewBeers({ beers }) {
                       component="img"
                       id={beer.id}
                       alt={beer.name}
-                      className="cardImg"
+                      sx={styles.cardImg}
                       image={
                         beer.image_url ??
                         "https://img.freepik.com/premium-photo/beer-bottle-white-backgroundglass-bottles-different-beer-light-grey-background_387864-625.jpg?w=2000"

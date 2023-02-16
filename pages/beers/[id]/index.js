@@ -10,14 +10,10 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import styles from "./styles";
 
-export async function getStaticPaths() {
-  const { data } = await axios.get("https://api.punkapi.com/v2/beers");
-  const paths = data.map((item) => ({
-    params: { id: item.id.toString() },
-  }));
-  return { paths, fallback: false };
-}
-
+export const getStaticPaths = async () => ({
+  paths: [],
+  fallback: 'blocking',
+});
 export async function getStaticProps({ params }) {
   const { data } = await axios.get(
     `https://api.punkapi.com/v2/beers/${params.id}`
@@ -64,9 +60,7 @@ export default function BeerDetails({ item }) {
                   gutterBottom
                   variant="h5"
                   component="h2"
-                  sx={
-                    styles.brushScriptElement
-                  }
+                  sx={styles.brushScriptElement}
                 >
                   {item.name}
                 </Typography>
@@ -104,8 +98,7 @@ export default function BeerDetails({ item }) {
                     pb: 1,
                     paddingTop: 2,
                     fontSize: 50,
-                  }
-                  }
+                  }}
                 >
                   {item.abv}%
                 </Typography>

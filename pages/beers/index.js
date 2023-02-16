@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import RenderBeers from "../components/RenderBeers";
+import RenderBeers from "../../components/RenderBeers";
 
 export default function Home() {
   return (

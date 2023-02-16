@@ -46,7 +46,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export default function PersistentDrawerLeft() {
+export default function MobileMenu() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -85,7 +85,7 @@ export default function PersistentDrawerLeft() {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href="/beers"
           >
             Beer World
           </Typography>
@@ -106,11 +106,7 @@ export default function PersistentDrawerLeft() {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
           </IconButton>
         </DrawerHeader>
         <Divider />

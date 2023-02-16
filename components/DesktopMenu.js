@@ -16,7 +16,7 @@ import SportsBarIcon from "@mui/icons-material/SportsBar";
 
 const drawerWidth = 240;
 
-export default function PermanentDrawerLeft() {
+export default function DesktopMenu() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -35,7 +35,7 @@ export default function PermanentDrawerLeft() {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href="/beers"
             sx={{ color: "black" }}
           >
             Beer World

@@ -15,7 +15,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 
-import GridViewBeers from "./gridViewBeers";
+import GridViewBeers from "./GridViewBeers/index";
 import ListViewBeers from "./ListViewBeers";
 
 export default function RenderBeers() {
@@ -116,8 +116,8 @@ export default function RenderBeers() {
             <ViewListIcon />
           </ToggleButton>
         </ToggleButtonGroup>
-        {view == "gridView" ? <GridViewBeers beers={beers} /> : null}
-        {view == "listView" ? <ListViewBeers beers={beers} /> : null}
+        {view == "gridView" ? <GridViewBeers beers={beers} key='gridView' /> : null}
+        {view == "listView" ? <ListViewBeers beers={beers} key='listView' /> : null}
       </Box>
 
       {!isSearch && (

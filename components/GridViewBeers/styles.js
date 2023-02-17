@@ -10,24 +10,21 @@ const styles = {
     textDecoration: "none",
     textDecorationColor: "black",
   },
-  brushScriptElement: {
+  brushScriptText: {
     fontFamily: '"Brush Script MT", cursive',
     fontWeight: "bold",
     fontSize: 35,
     color: "black",
   },
-  courierViewElement: {
+  courierText: {
     fontFamily: '"Courier New", Courier, monospace',
     fontWeight: "bold",
     fontSize: 20,
   },
   cardImg: {
-    paddingTop: "1cm",
-  width: "10cm",
-  height: "16cm",
-  objectFit: "contain",
-  paddingBottom: "1cm",
-  marginLeft: "0.8cm"
+    paddingTop: "8%",
+    objectFit: "contain",
+    paddingBottom: "8%",
   },
 };
 

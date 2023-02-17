@@ -116,18 +116,21 @@ export default function RenderBeers() {
             <ViewListIcon />
           </ToggleButton>
         </ToggleButtonGroup>
-        {view == "gridView" ? <GridViewBeers beers={beers} key='gridView' /> : null}
-        {view == "listView" ? <ListViewBeers beers={beers} key='listView' /> : null}
+        {view == "gridView" ? <GridViewBeers beers={beers} /> : null}
+        {view == "listView" ? <ListViewBeers beers={beers} /> : null}
       </Box>
 
       {!isSearch && (
-        <Stack sx={{
-          color: '#ffffff',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          marginTop: '1rem',
-          textAlign: 'center',
-        }} spacing={2}>
+        <Stack
+          sx={{
+            color: "#ffffff",
+            flexWrap: "wrap",
+            alignItems: "center",
+            marginTop: "1rem",
+            textAlign: "center",
+          }}
+          spacing={2}
+        >
           <Typography>Page: {page}</Typography>
           <Pagination
             color="primary"

@@ -9,6 +9,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import styles from "./styles";
+import Image from "next/image";
 
 export default function GridViewBeers({ beers }) {
   return (
@@ -27,22 +28,20 @@ export default function GridViewBeers({ beers }) {
               <Link href={`/beers/${beer.id}`}>
                 <CardActionArea>
                   <CardContent>
-                    <CardMedia
-                      component="img"
-                      id={beer.id}
-                      alt={beer.name}
-                      sx={styles.cardImg}
-                      image={
+                    <Image
+                      width={300}
+                      height={600}
+                      style={styles.cardImg}
+                      src={
                         beer.image_url ??
                         "https://img.freepik.com/premium-photo/beer-bottle-white-backgroundglass-bottles-different-beer-light-grey-background_387864-625.jpg?w=2000"
                       }
                     />
-
                     <Typography
                       gutterBottom
                       variant="h5"
                       component="h2"
-                      sx={{ ...styles.brushScriptElement, fontSize: 35 }}
+                      sx={{ ...styles.brushScriptText, fontSize: 35 }}
                     >
                       {beer.name}
                     </Typography>
@@ -50,7 +49,7 @@ export default function GridViewBeers({ beers }) {
                     <Typography
                       variant="body2"
                       color="textSecondary"
-                      sx={styles.courierViewElement}
+                      sx={styles.courierText}
                     >
                       {beer.tagline}
                     </Typography>
@@ -60,7 +59,7 @@ export default function GridViewBeers({ beers }) {
                       color="textSecondary"
                       component="p"
                       sx={{
-                        ...styles.brushScriptElement,
+                        ...styles.brushScriptText,
                         paddingBottom: 1,
                         paddingTop: 2,
                         fontSize: 50,

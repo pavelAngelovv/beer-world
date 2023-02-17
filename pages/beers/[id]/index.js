@@ -9,6 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import styles from "./styles";
+import Image from "next/image";
 
 export const getStaticPaths = async () => ({
   paths: [],
@@ -35,12 +36,11 @@ export default function BeerDetails({ item }) {
       <Box sx={styles.detailsContainer}>
         <Card sx={styles.detailsCard}>
           <Box display="flex" sx={styles.cardContent}>
-            <CardMedia
-              component="img"
-              id={item.id}
-              alt={item.name}
-              sx={styles.beerImg}
-              image={
+            <Image
+              width={350}
+              height={900}
+              style={styles.beerImg}
+              src={
                 item.image_url ??
                 "https://img.freepik.com/premium-photo/beer-bottle-white-backgroundglass-bottles-different-beer-light-grey-background_387864-625.jpg?w=2000"
               }
@@ -49,12 +49,12 @@ export default function BeerDetails({ item }) {
             <CardContent
               sx={{
                 width: "50%",
-                pr: "5%",
               }}
             >
               <Box
                 sx={{
                   float: "right",
+                  ml: { xl: 10, lg: 10, md: 0, sm: 0, xs: 0 },
                 }}
               >
                 <Typography

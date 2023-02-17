@@ -9,7 +9,7 @@ const styles = {
   detailsContainer: {
     m: 2,
     ml: 1.3,
-    mr: "5%",
+    mr: "0%",
     textAlign: "center",
     flexDirection: "column",
   },

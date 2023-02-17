@@ -45,15 +45,13 @@ export default function Profile() {
         >
           My Account
         </Typography>
-
-        <Box sx={{ ...styles.accountPaper }}>
-          <Image
-            width={200}
-            height={200}
-            alt="profile-picture"
-            src={user.picture.large}
-          />
-        </Box>
+        <Image
+          style={{ borderRadius: 100 }}
+          width={200}
+          height={200}
+          alt="profile-picture"
+          src={user.picture.large}
+        />
         <Box sx={{ ...styles.accountPaper, mt: 2, mb: 5 }}>
           <Grid item xs={12}>
             <Typography variant="h4">{`${user.name.first}`}</Typography>

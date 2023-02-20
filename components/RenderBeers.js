@@ -15,7 +15,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 
-import GridViewBeers from "./gridViewBeers";
+import GridViewBeers from "./GridViewBeers";
 import ListViewBeers from "./ListViewBeers";
 
 export default function RenderBeers() {
@@ -121,7 +121,16 @@ export default function RenderBeers() {
       </Box>
 
       {!isSearch && (
-        <Stack className="pagination" spacing={2}>
+        <Stack
+          sx={{
+            color: "#ffffff",
+            flexWrap: "wrap",
+            alignItems: "center",
+            marginTop: "1rem",
+            textAlign: "center",
+          }}
+          spacing={2}
+        >
           <Typography>Page: {page}</Typography>
           <Pagination
             color="primary"

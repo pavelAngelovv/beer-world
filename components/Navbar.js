@@ -1,14 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 
-import PersistentDrawerLeft from "./MobileMenu";
-import PermanentDrawerLeft from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
+import DesktopMenu from "./DesktopMenu";
 
 function Navbar() {
   return (
     <Box>
       <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-        <PersistentDrawerLeft />
+        <MobileMenu />
       </Box>
 
       <Box
@@ -19,7 +19,7 @@ function Navbar() {
           justifyContent: "right",
         }}
       >
-        <PermanentDrawerLeft />
+        <DesktopMenu />
       </Box>
     </Box>
   );

@@ -1,7 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-} from 'react';
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -9,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
+import styles from "./styles";
 
 export default function Profile() {
   const [user, setUser] = useState({});
@@ -35,13 +33,11 @@ export default function Profile() {
   }
 
   return (
-    <Box
-      sx={{ marginLeft: { md: 45, sm: "0" }, marginRight: { md: 15, sm: 0 } }}
-    >
+    <Box sx={styles.boxContainer}>
       <Box sx={{ paddingTop: 10, textAlign: "center" }}>
         <Typography
           sx={{
-            textAlign: "center",
+            ...styles.accountPaper,
             fontSize: "70px",
             fontFamily: ' "Brush Script MT", cursive;',
             paddingBottom: 10,
@@ -49,17 +45,14 @@ export default function Profile() {
         >
           My Account
         </Typography>
-
-        <Box sx={{ textAlign: "center" }}>
-          <Image
-            width={200}
-            height={200}
-            alt="profile-picture"
-            className="profilePicture"
-            src={user.picture.large}
-          />
-        </Box>
-        <Box sx={{ textAlign: "center", mt: 2, mb: 5 }}>
+        <Image
+          style={{ borderRadius: 100 }}
+          width={200}
+          height={200}
+          alt="profile-picture"
+          src={user.picture.large}
+        />
+        <Box sx={{ ...styles.accountPaper, mt: 2, mb: 5 }}>
           <Grid item xs={12}>
             <Typography variant="h4">{`${user.name.first}`}</Typography>
             <Typography variant="h4">{`${user.name.last}`}</Typography>
@@ -75,7 +68,7 @@ export default function Profile() {
             alignItems="center"
             sx={{ wordWrap: "break-word" }}
           >
-            <Paper sx={{ textAlign: "center", width: "100%", mb: 2.4 }}>
+            <Paper sx={{ ...styles.accountPaper, mb: 2.4 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Email</Typography>
                 <Divider />
@@ -85,7 +78,7 @@ export default function Profile() {
               </Grid>
             </Paper>
 
-            <Paper sx={{ textAlign: "center", width: "100%", mb: 2 }}>
+            <Paper sx={{ ...styles.accountPaper, mb: 2 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Phone Number</Typography>
                 <Divider />
@@ -104,7 +97,7 @@ export default function Profile() {
             direction="column"
             alignItems="center"
           >
-            <Paper sx={{ textAlign: "center", width: "100%", mb: 2.3 }}>
+            <Paper sx={{ ...styles.accountPaper, mb: 2.3 }}>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Gender</Typography>
                 <Divider />

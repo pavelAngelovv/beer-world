@@ -22,13 +22,14 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    #dddddd, /* Light gray */
+    #3f3f3f /* Black */
+  );
+  /* background-color: #777 */
+    /* rgb(var(--background-start-rgb)); */
 }
 
 a {text-decoration: none;}
@@ -40,6 +41,10 @@ footer {
   padding-bottom: 0.7cm;
   color: #777;
   margin-top: 1cm;
+}
+
+.MuiInputBase-root {
+  opacity: 0;
 }
 
 

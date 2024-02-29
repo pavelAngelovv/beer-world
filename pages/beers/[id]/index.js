@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import styles from "./styles";
+import styles from "../../../styles/beers/[id]/styles";
 import Image from "next/image";
 
 export const getStaticPaths = async () => ({

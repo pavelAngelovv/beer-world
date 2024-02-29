@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import styles from "./styles";
+import styles from "../../styles/account/styles";
 
 export default function Profile() {
   const [user, setUser] = useState({});

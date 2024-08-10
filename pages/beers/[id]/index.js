@@ -1,28 +1,33 @@
+import fs from 'fs';
+import path from 'path';
 import React from "react";
-import axios from "axios";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import styles from "../../../styles/beers/[id]/styles";
 import Image from "next/image";
+import { promisify } from 'util';
 
 export const getStaticPaths = async () => ({
   paths: [],
   fallback: "blocking",
 });
 
+const readFile = promisify(fs.readFile);
+
 export async function getStaticProps({ params }) {
-  const { data } = await axios.get(
-    `https://api.punkapi.com/v2/beers/${params.id}`
-  );
+  const filePath = path.join(process.cwd(), 'beers.json');
+  const fileContents = await readFile(filePath, 'utf8');
+  const beersData = JSON.parse(fileContents);
+  const item = beersData.find((beer) => beer.id === parseInt(params.id));
+
   return {
     props: {
-      item: data[0],
+      item: item || null,
     },
   };
 }

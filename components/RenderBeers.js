@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -17,6 +16,7 @@ import ViewModuleIcon from "@mui/icons-material/ViewModule";
 
 import GridViewBeers from "./GridViewBeers";
 import ListViewBeers from "./ListViewBeers";
+import beersData from "../beers.json";
 
 export default function RenderBeers() {
   const router = useRouter();
@@ -34,38 +34,28 @@ export default function RenderBeers() {
     setQuery(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (query === "") {
-      router.push(`beers`, undefined, { shallow: true });
       return getBeerData();
     }
 
-    const res = await axios
-      .get(`https://api.punkapi.com/v2/beers?beer_name=${query}&per_page=10`)
-      .catch((error) => console.error(error.message));
-    const queryBeerData = res.data;
-    router.push(`beers/?beer_name=${query}`, undefined, { shallow: true });
+    const queryBeerData = beersData.filter((beer) =>
+      beer.name.toLowerCase().includes(query.toLowerCase())
+    );
     setIsSearch(true);
     setBeers(queryBeerData);
   };
 
   const handleChange = (event, value) => {
     setPage(value);
-    router.push(`beers/?page=${value}`, undefined, { shallow: true });
   };
 
   const getBeerData = () => {
-    axios
-      .get(`https://api.punkapi.com/v2/beers?page=${page}&per_page=10`)
-      .then((response) => {
-        const beerData = response.data;
-        setIsSearch(false);
-        setBeers(beerData);
-      })
-      .catch((error) => {
-        console.error(error.message);
-      });
+    const beersPerPage = 5;
+    const paginatedBeers = beersData.slice((page - 1) * beersPerPage, page * beersPerPage);
+    setIsSearch(false);
+    setBeers(paginatedBeers);
   };
 
   return (
@@ -78,14 +68,13 @@ export default function RenderBeers() {
           <TextField
             id="input-search"
             size="large"
-            label="Search Beers"
+            label="Under development"
             variant="filled"
             InputProps={{ disableUnderline: true }}
             sx={{ backgroundColor: "white", borderRadius: 10 }}
             value={query}
             onChange={handleSearchChange}
           />
-
           <Button onClick={handleSubmit} type="submit">
             <Avatar sx={{ width: 50, height: 50 }}>
               <SearchIcon />
@@ -134,7 +123,7 @@ export default function RenderBeers() {
           <Typography>Page: {page}</Typography>
           <Pagination
             color="primary"
-            count={33}
+            count={Math.ceil(beersData.length / 5)}
             page={page}
             onChange={handleChange}
             sx={{ button: { color: "white" } }}
